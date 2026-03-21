@@ -1,0 +1,30 @@
+/* ============================================================
+   footer.css — Footer Styles
+   ============================================================
+   To edit footer links/text: sections/footer.html
+   ============================================================ */
+
+footer {
+  background: var(--text);
+  color: rgba(255,255,255,.55);
+  padding: 2rem 5vw;
+  text-align: center;
+  font-size: .82rem;
+}
+
+footer strong { color: white; }
+
+.footer-links {
+  margin-top: .4rem;
+  font-size: .72rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,.4);
+  text-decoration: none;
+  transition: color .2s;
+}
+.footer-links a:hover { color: rgba(255,255,255,.8); }

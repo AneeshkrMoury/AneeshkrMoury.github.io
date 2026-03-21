@@ -1,0 +1,46 @@
+/* ============================================================
+   tokens.css — Design Tokens & Global Reset
+   ============================================================
+   Edit CSS variables here to change the entire site's theme.
+   All colors, fonts, spacing defined in one place.
+   ============================================================ */
+
+/* ── DESIGN TOKENS ── */
+:root {
+  /* Colors */
+  --bg:           #f7f6f2;
+  --surface:      #ffffff;
+  --border:       #e8e6e0;
+  --text:         #1a1916;
+  --muted:        #7a7870;
+  --accent:       #2563eb;
+  --accent-light: #eff4ff;
+  --tag-bg:       #f0f0ec;
+
+  /* Typography */
+  --font-display: 'Syne', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  /* Layout */
+  --max-width:    1100px;
+  --section-pad:  80px 5vw;
+  --radius:       16px;
+  --shadow:       0 2px 16px rgba(0,0,0,0.07);
+}
+
+/* ── RESET ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
+}

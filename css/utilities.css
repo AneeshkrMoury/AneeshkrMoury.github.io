@@ -1,0 +1,100 @@
+/* ============================================================
+   utilities.css — Shared Utility Classes
+   ============================================================
+   Reusable classes used across all sections.
+   Add new utilities here, not inside section files.
+   ============================================================ */
+
+/* ── LAYOUT ── */
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.divider {
+  height: 1px;
+  background: var(--border);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ── SECTION HEADERS ── */
+.section-label {
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .5rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -.8px;
+  margin-bottom: 1rem;
+}
+
+.section-desc {
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 520px;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+/* ── BUTTONS ── */
+.btn-primary {
+  background: var(--text);
+  color: #fff;
+  padding: .75rem 1.6rem;
+  border-radius: 10px;
+  font-size: .9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background .2s;
+  display: inline-block;
+}
+.btn-primary:hover { background: #333; }
+
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  padding: .75rem 1.6rem;
+  border-radius: 10px;
+  font-size: .9rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1.5px solid var(--border);
+  transition: border-color .2s;
+  display: inline-block;
+}
+.btn-outline:hover { border-color: var(--text); }
+
+/* ── TAGS ── */
+.tag {
+  background: var(--tag-bg);
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 500;
+  padding: 3px 9px;
+  border-radius: 6px;
+}
+
+/* ── SCROLL REVEAL ANIMATION ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .55s ease, transform .55s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── PULSE ANIMATION (used in badges & dots) ── */
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1);   }
+  50%       { opacity: .5; transform: scale(.8); }
+}

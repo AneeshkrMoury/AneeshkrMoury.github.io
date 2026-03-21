@@ -1,0 +1,119 @@
+/* ============================================================
+   projects.css — Projects Section Styles
+   ============================================================
+   To add a new project card: sections/projects.html
+   Thumb color classes: thumb-blue, thumb-green, thumb-yellow,
+                        thumb-purple, thumb-pink, thumb-orange
+   Status classes: status-live, status-building, status-concept
+   ============================================================ */
+
+#projects { background: var(--bg); padding: var(--section-pad); }
+
+/* ── Grid ── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ── Card ── */
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s, box-shadow .2s;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,.1);
+}
+
+/* ── Thumbnail ── */
+.project-thumb {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2rem;
+  position: relative;
+}
+
+/* Thumb color variants — add more as needed */
+.thumb-blue   { background: linear-gradient(135deg, #dbeafe, #bfdbfe); }
+.thumb-green  { background: linear-gradient(135deg, #dcfce7, #bbf7d0); }
+.thumb-yellow { background: linear-gradient(135deg, #fef9c3, #fde68a); }
+.thumb-purple { background: linear-gradient(135deg, #ede9fe, #ddd6fe); }
+.thumb-pink   { background: linear-gradient(135deg, #fce7f3, #fbcfe8); }
+.thumb-orange { background: linear-gradient(135deg, #ffedd5, #fed7aa); }
+
+/* ── Status Badge ── */
+.project-status {
+  position: absolute;
+  top: 10px; right: 10px;
+  font-size: .7rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 100px;
+  letter-spacing: .5px;
+}
+.status-live     { background: #dcfce7; color: #16a34a; }
+.status-building { background: #fef9c3; color: #ca8a04; }
+.status-concept  { background: #f3f4f6; color: #6b7280; }
+
+/* ── Body ── */
+.project-body {
+  padding: 1.3rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.project-body h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+.project-body p {
+  font-size: .84rem;
+  color: var(--muted);
+  flex: 1;
+  line-height: 1.6;
+}
+
+/* ── Tags ── */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin: .9rem 0;
+}
+
+/* ── Footer Buttons ── */
+.project-footer {
+  display: flex;
+  gap: .6rem;
+  padding-top: .9rem;
+  border-top: 1px solid var(--border);
+}
+.proj-btn {
+  flex: 1;
+  text-align: center;
+  padding: .5rem;
+  border-radius: 8px;
+  font-size: .8rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all .2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .35rem;
+}
+.proj-live       { background: var(--accent); color: white; }
+.proj-live:hover { opacity: .85; }
+.proj-gh         { background: var(--bg); color: var(--text); border: 1px solid var(--border); }
+.proj-gh:hover   { border-color: var(--text); }
+.proj-soon       { background: var(--tag-bg); color: var(--muted); cursor: not-allowed; pointer-events: none; }
